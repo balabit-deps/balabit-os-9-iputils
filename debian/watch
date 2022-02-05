@@ -1,0 +1,4 @@
+version=4
+opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz-$1.tar.xz"
+  https://github.com/iputils/iputils/tags \
+  (?:.*?/)?v?s(\d[\d.]*)\.tar\.gz debian uupdate

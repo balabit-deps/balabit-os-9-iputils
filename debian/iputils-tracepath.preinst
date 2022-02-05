@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = upgrade ]; then
+    # Older versions of iputils-tracepath provided a traceroute6
+    # binary registered with /etc/alternatives.  Ensure that it's
+    # removed:
+    update-alternatives --remove traceroute6 /usr/bin/traceroute6.iputils
+fi
+
+#DEBHELPER#
+
+exit 0
